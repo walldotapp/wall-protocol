@@ -1,0 +1,674 @@
+{
+  "contractName": "RoyaltiesVersion1Upgrade",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "bps",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "SecondarySaleFees",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFeeBps",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFeeRecipients",
+      "outputs": [
+        {
+          "internalType": "address payable[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"recipients\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"bps\",\"type\":\"uint256[]\"}],\"name\":\"SecondarySaleFees\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getFeeBps\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getFeeRecipients\",\"outputs\":[{\"internalType\":\"address payable[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}. Time complexity O(1), guaranteed to always use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/aniketdixit/Documents/wallappsendthis/contracts/royaltiesUpgrade/contracts/RoyaltiesVersion1Upgrade.sol\":\"RoyaltiesVersion1Upgrade\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/aniketdixit/Documents/wallappsendthis/contracts/royalties/contracts/LibRoyaltiesVersion1.sol\":{\"keccak256\":\"0xa69539ead11d93c9c53c97c66c01f2aa054bdc51dfc266c05c9ff59b9c648d0f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3bb1b575738f2ebb531b3156e86915d4222377e6b62968e911e92a82267222a0\",\"dweb:/ipfs/QmQtnjU8QNgPKspPwHR8bD8zY76ygcztEuQAaKWPUimN7e\"]},\"/home/aniketdixit/Documents/wallappsendthis/contracts/royalties/contracts/RoyaltiesVersion1.sol\":{\"keccak256\":\"0x2c6766a0abb40536173f603811cdbfee48336863ca762175fb38b385b0dc761e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://128be33fb58204bae43b9742c8b73a4fe6ffd066388be0d4683fc97daee0cc1c\",\"dweb:/ipfs/QmRPwtDGtGqHeayLpLwpSNSomj3fbxAzv1vNSnCMfdiM1X\"]},\"/home/aniketdixit/Documents/wallappsendthis/contracts/royaltiesUpgrade/contracts/RoyaltiesVersion1Upgrade.sol\":{\"keccak256\":\"0x989dcc5cf6f4b231c556bd2711cafd22107aaccffd1d905b70e5c3ad589de7f0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://82bd609cd56c594d1946c110a52959173b48473d1562eb6705262d45ee9187e1\",\"dweb:/ipfs/QmWuR4ENPjDVjp6RVeDyDikpfQGh7V6Urid5DMyCGiuUyd\"]},\"@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol\":{\"keccak256\":\"0xc6dbbc2f50a7c104377798a37b2acd1a41c1242544b0bb7a9a7c863f0520eb50\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ff3a66f685a49d3750c9b3588770d1ee43ce3cb718e1dc911ac65d8a6d1c1f0d\",\"dweb:/ipfs/QmVK2mdcbZTZ81YQ1rxWWNbYgy3Gpb3yz3L2qtDPTdx9hu\"]},\"@openzeppelin/contracts-upgradeable/introspection/IERC165Upgradeable.sol\":{\"keccak256\":\"0x4784c3f8a520a739dd25d76f514833a653990902d0e21601aed45bda44c87524\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://359411cc44a4499f37d46562ef3f348db443f9a699138c1797264d20b14697b7\",\"dweb:/ipfs/QmUmeQNUwve4MFCc1ace6zMnstqa8S9SZe1nXG9THcpQ5v\"]},\"@openzeppelin/contracts-upgradeable/proxy/Initializable.sol\":{\"keccak256\":\"0xd8e4eb08dcc1d1860fb347ba5ffd595242b9a1b66d49a47f2b4cb51c3f35017e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7dbc89479d30592e82442edc38053b380f611037a5e6ceafc7bf57a7aa1f0305\",\"dweb:/ipfs/QmcdYtt56WmjeYvsFjK69FnahnAriw88VzY3XRZwXkQKKN\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0xfc5ea91fa9ceb1961023b2a6c978b902888c52b90847ac7813fe3b79524165f6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a6b81dcc816857a9d981386f6d8de49198420ee41cdc0ecade366ab412174d03\",\"dweb:/ipfs/QmV2vznMT6m9qo3pFMAWi3Nz3UDhwesgwFxeXe6Tod3v8A\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.2 <0.8.0;\n\nimport \"@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol\";\nimport \"../../royalties/contracts/LibRoyaltiesVersion1.sol\";\nimport \"../../royalties/contracts/RoyaltiesVersion1.sol\";\n\nabstract contract RoyaltiesVersion1Upgrade is ERC165Upgradeable, RoyaltiesVersion1 {\n    function __RoyaltiesVersion1Upgrade_init_unchained() internal initializer {\n        _registerInterface(LibRoyaltiesV1._INTERFACE_ID_FEES);\n    }\n}\n",
+  "sourcePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royaltiesUpgrade/contracts/RoyaltiesVersion1Upgrade.sol",
+  "ast": {
+    "absolutePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royaltiesUpgrade/contracts/RoyaltiesVersion1Upgrade.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        6570
+      ],
+      "ERC165Upgradeable": [
+        3360
+      ],
+      "IERC165Upgradeable": [
+        3372
+      ],
+      "Initializable": [
+        3793
+      ],
+      "LibRoyaltiesV1": [
+        420
+      ],
+      "RoyaltiesVersion1": [
+        455
+      ],
+      "RoyaltiesVersion1Upgrade": [
+        859
+      ]
+    },
+    "id": 860,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 840,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".2",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:13"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+        "id": 841,
+        "nodeType": "ImportDirective",
+        "scope": 860,
+        "sourceUnit": 3361,
+        "src": "66:81:13",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royalties/contracts/LibRoyaltiesVersion1.sol",
+        "file": "../../royalties/contracts/LibRoyaltiesVersion1.sol",
+        "id": 842,
+        "nodeType": "ImportDirective",
+        "scope": 860,
+        "sourceUnit": 421,
+        "src": "148:60:13",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royalties/contracts/RoyaltiesVersion1.sol",
+        "file": "../../royalties/contracts/RoyaltiesVersion1.sol",
+        "id": 843,
+        "nodeType": "ImportDirective",
+        "scope": 860,
+        "sourceUnit": 456,
+        "src": "209:57:13",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 844,
+              "name": "ERC165Upgradeable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3360,
+              "src": "314:17:13",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC165Upgradeable_$3360",
+                "typeString": "contract ERC165Upgradeable"
+              }
+            },
+            "id": 845,
+            "nodeType": "InheritanceSpecifier",
+            "src": "314:17:13"
+          },
+          {
+            "baseName": {
+              "id": 846,
+              "name": "RoyaltiesVersion1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 455,
+              "src": "333:17:13",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RoyaltiesVersion1_$455",
+                "typeString": "contract RoyaltiesVersion1"
+              }
+            },
+            "id": 847,
+            "nodeType": "InheritanceSpecifier",
+            "src": "333:17:13"
+          }
+        ],
+        "contractDependencies": [
+          455,
+          3360,
+          3372,
+          3793
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 859,
+        "linearizedBaseContracts": [
+          859,
+          455,
+          3360,
+          3372,
+          3793
+        ],
+        "name": "RoyaltiesVersion1Upgrade",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 857,
+              "nodeType": "Block",
+              "src": "431:70:13",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 853,
+                          "name": "LibRoyaltiesV1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 420,
+                          "src": "460:14:13",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_LibRoyaltiesV1_$420_$",
+                            "typeString": "type(library LibRoyaltiesV1)"
+                          }
+                        },
+                        "id": 854,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "_INTERFACE_ID_FEES",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 419,
+                        "src": "460:33:13",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 852,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3355,
+                      "src": "441:18:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 855,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "441:53:13",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 856,
+                  "nodeType": "ExpressionStatement",
+                  "src": "441:53:13"
+                }
+              ]
+            },
+            "id": 858,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 850,
+                "modifierName": {
+                  "id": 849,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3776,
+                  "src": "419:11:13",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "419:11:13"
+              }
+            ],
+            "name": "__RoyaltiesVersion1Upgrade_init_unchained",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "407:2:13"
+            },
+            "returnParameters": {
+              "id": 851,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "431:0:13"
+            },
+            "scope": 859,
+            "src": "357:144:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 860,
+        "src": "268:235:13"
+      }
+    ],
+    "src": "33:471:13"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royaltiesUpgrade/contracts/RoyaltiesVersion1Upgrade.sol",
+      "exportedSymbols": {
+        "AddressUpgradeable": [
+          6570
+        ],
+        "ERC165Upgradeable": [
+          3360
+        ],
+        "IERC165Upgradeable": [
+          3372
+        ],
+        "Initializable": [
+          3793
+        ],
+        "LibRoyaltiesV1": [
+          420
+        ],
+        "RoyaltiesVersion1": [
+          455
+        ],
+        "RoyaltiesVersion1Upgrade": [
+          859
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".2",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 840,
+        "name": "PragmaDirective",
+        "src": "33:31:13"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 3361,
+          "absolutePath": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+          "file": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+          "scope": 860,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 841,
+        "name": "ImportDirective",
+        "src": "66:81:13"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 421,
+          "absolutePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royalties/contracts/LibRoyaltiesVersion1.sol",
+          "file": "../../royalties/contracts/LibRoyaltiesVersion1.sol",
+          "scope": 860,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 842,
+        "name": "ImportDirective",
+        "src": "148:60:13"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 456,
+          "absolutePath": "/home/aniketdixit/Documents/wallappsendthis/contracts/royalties/contracts/RoyaltiesVersion1.sol",
+          "file": "../../royalties/contracts/RoyaltiesVersion1.sol",
+          "scope": 860,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 843,
+        "name": "ImportDirective",
+        "src": "209:57:13"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "contractDependencies": [
+            455,
+            3360,
+            3372,
+            3793
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            859,
+            455,
+            3360,
+            3372,
+            3793
+          ],
+          "name": "RoyaltiesVersion1Upgrade",
+          "scope": 860
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "name": "ERC165Upgradeable",
+                  "referencedDeclaration": 3360,
+                  "type": "contract ERC165Upgradeable"
+                },
+                "id": 844,
+                "name": "UserDefinedTypeName",
+                "src": "314:17:13"
+              }
+            ],
+            "id": 845,
+            "name": "InheritanceSpecifier",
+            "src": "314:17:13"
+          },
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "name": "RoyaltiesVersion1",
+                  "referencedDeclaration": 455,
+                  "type": "contract RoyaltiesVersion1"
+                },
+                "id": 846,
+                "name": "UserDefinedTypeName",
+                "src": "333:17:13"
+              }
+            ],
+            "id": 847,
+            "name": "InheritanceSpecifier",
+            "src": "333:17:13"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "__RoyaltiesVersion1Upgrade_init_unchained",
+              "scope": 859,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 848,
+                "name": "ParameterList",
+                "src": "407:2:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 851,
+                "name": "ParameterList",
+                "src": "431:0:13"
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 3776,
+                      "type": "modifier ()",
+                      "value": "initializer"
+                    },
+                    "id": 849,
+                    "name": "Identifier",
+                    "src": "419:11:13"
+                  }
+                ],
+                "id": 850,
+                "name": "ModifierInvocation",
+                "src": "419:11:13"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes4",
+                                  "typeString": "bytes4"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 3355,
+                              "type": "function (bytes4)",
+                              "value": "_registerInterface"
+                            },
+                            "id": 852,
+                            "name": "Identifier",
+                            "src": "441:18:13"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "_INTERFACE_ID_FEES",
+                              "referencedDeclaration": 419,
+                              "type": "bytes4"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 420,
+                                  "type": "type(library LibRoyaltiesV1)",
+                                  "value": "LibRoyaltiesV1"
+                                },
+                                "id": 853,
+                                "name": "Identifier",
+                                "src": "460:14:13"
+                              }
+                            ],
+                            "id": 854,
+                            "name": "MemberAccess",
+                            "src": "460:33:13"
+                          }
+                        ],
+                        "id": 855,
+                        "name": "FunctionCall",
+                        "src": "441:53:13"
+                      }
+                    ],
+                    "id": 856,
+                    "name": "ExpressionStatement",
+                    "src": "441:53:13"
+                  }
+                ],
+                "id": 857,
+                "name": "Block",
+                "src": "431:70:13"
+              }
+            ],
+            "id": 858,
+            "name": "FunctionDefinition",
+            "src": "357:144:13"
+          }
+        ],
+        "id": 859,
+        "name": "ContractDefinition",
+        "src": "268:235:13"
+      }
+    ],
+    "id": 860,
+    "name": "SourceUnit",
+    "src": "33:471:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-07T08:25:44.194Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "See {IERC165-supportsInterface}. Time complexity O(1), guaranteed to always use less than 30 000 gas."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
